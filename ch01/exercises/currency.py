@@ -10,6 +10,6 @@ total = (amount / rate)
 var2 = total
 print("The total USD you will receive from the exchange: $", round(total, 2))
 
-result = (total - 1)
+result = (total - 3)
 var3 = result
 print("After a $3.00 service fee, you will receive: $", round(result, 2))
