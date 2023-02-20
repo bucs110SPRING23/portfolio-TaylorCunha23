@@ -16,3 +16,6 @@ print("Cost per class:", "$", cost_per_class, type(cost_per_class))
 Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
 var = Months
 print(random.choice(Months))
+print("The number of weeks: 16", type(weeks))
+print("The number of classes: 5", type(classes))
+print("The tuition: $6000", type(tuition))
