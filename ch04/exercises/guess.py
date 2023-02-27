@@ -18,5 +18,6 @@ while(True):
 print("The correct guess was:", correctguess)
 print("Your guesses:", guesses)
 print("It took you", number_of_guesses, "tries to get the correct guess.")
+print("The maximum number of guesses it should take using a binary search algorithm is 10 guesses.")
     
     
