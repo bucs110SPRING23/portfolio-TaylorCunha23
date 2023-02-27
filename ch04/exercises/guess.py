@@ -8,7 +8,6 @@ while(True):
     guesses.append(guess)
     number_of_guesses = len(guesses)
     if (guess == correctguess):
-
         print("Correct!")
         break
     elif (guess > correctguess):
