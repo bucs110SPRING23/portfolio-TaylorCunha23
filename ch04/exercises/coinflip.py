@@ -28,21 +28,14 @@ while (True):
             print("Heads!")
             taylor.left(90)
             taylor.forward(50)
-            if taylor.position(-500 < x < 500):
-                break
-            taylor.undo()
-            if taylor.position(-500 < y < 500):
+            if 0 > x or x > 500 and -500 > y or y > 500:
                 break
         if coinflip == "tails":
             print("Tails!")
             taylor.right(90)
             taylor.forward(50)
-            if taylor.position(-500 < x < 500):
-                break
-            if taylor.position(-500 < y < 500):
-                break
-            taylor.undo()
-    
+            if 0 > x or x > 500 and -500 > y or y > 500:
+                break           
 
 
 
