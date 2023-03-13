@@ -7,4 +7,12 @@ def star_pyramid(value):
         myList.append("*"*i)
     print("\n".join(myList))
 
+print("In order:")
 star_pyramid(value)
+
+def rstar_pyramid(value):
+    for i in range (value, 0, -1):
+        print((value-i) * ' ' + i * '*')
+
+print("In reverse order:")
+rstar_pyramid(value)
