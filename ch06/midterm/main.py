@@ -39,19 +39,23 @@ def mouth(mouth_color, radius, extent):
 
 def main():
     print("Customize your smiley face!")
-    face_color=input("What color is the face?:")
+
+    face_color = input("What color is the face?:")
     face(face_color,100)
     pen.goto(-40, 120)
-    eye_color=input("What color are the eyes?:")
+
+    eye_color = input("What color are the eyes?:")
     eyes(eye_color, 15)
     pen.goto(-37, 125)
-    eyes("black", 5)
+    pupils = "black"
+    eyes(pupils, 5)
     pen.goto(40, 120)
     eyes(eye_color, 15)
     pen.goto(40, 125)
-    eyes("black", 5)
+    eyes(pupils, 5)
     pen.goto(0, 75)
-    nose_color=input("What color is the nose?:")
+
+    nose_color = input("What color is the nose?:")
     nose(nose_color, 8)
     pen.goto(-40, 85)
     pen.down()
@@ -61,7 +65,8 @@ def main():
     pen.goto(-10, 45)
     pen.down()
     pen.right(180)
-    mouth_color=input("What color is the mouth?:")
+    
+    mouth_color = input("What color is the mouth?:")
     mouth(mouth_color, 10, 180)
     pen.hideturtle()
     turtle.done()
