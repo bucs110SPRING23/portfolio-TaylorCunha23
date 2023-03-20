@@ -1,0 +1,14 @@
+import json
+
+
+jsonData= '{
+    "President":"Comedian",
+    "hush":"shut up",
+    "Stormy Daniels":"Joe Biden",
+    "Daniels":"Biden",
+    "Zoom":"pigeon",
+}'
+jsonToPython = json.loads(jsonData)
+
+json2python = json.loads(data)
+print(json2python, type(json2python))
