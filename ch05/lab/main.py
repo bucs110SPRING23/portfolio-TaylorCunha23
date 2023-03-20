@@ -3,8 +3,8 @@ pygame.init()
 
 
 def threenp1(n):
-    num_seq = [n]
     count = 0
+    num_seq = []
     if n < 1:
        return []
     while n > 1:
@@ -19,10 +19,14 @@ def threenp1(n):
     return num_seq
     return count
 
+def threenp1range(upper_limit):
+    
+
 def main():
     n = int(input("Positive integer:"))
+    num_seq = []
     count = threenp1(n)
     print("Number you started with:", n)
     print("Iterations:", count)
-
+    print("Number of iterations:", len(count))
 main()
