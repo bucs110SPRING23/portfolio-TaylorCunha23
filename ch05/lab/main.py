@@ -1,5 +1,7 @@
 import pygame
 pygame.init()
+pygame.display.init
+screen = pygame.display.set_mode((1000, 1000))
 
 def threenp1(n):
     count = 0
@@ -22,8 +24,9 @@ def threenp1range(upper_limit):
     return objs_in_sequence
 
 def graph_coordinates(threenplus1_iters_dict):
-    dict.items()
-    pygame.draw.lines()
+    upper_limit = 10
+    objs_in_sequence = threenp1range(upper_limit)
+    threenplus1_iters_dict = dict.items(objs_in_sequence)
 
 def main():
     upper_limit = 10
@@ -34,6 +37,13 @@ def main():
     print("Number you started with:", n)
     print("Iterations:", objs_in_sequence)
     print("Number of iterations:", count)
+    threenplus1_iters_dict = dict.items(objs_in_sequence)
+    graph_coordinates(threenplus1_iters_dict)
+    x = objs_in_sequence
+    y = count
+    pygame.draw.lines(screen, "black", dict(x), dict(y))
 
+    width, height = new_display.get_size()
+    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
 
 main()
