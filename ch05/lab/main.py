@@ -21,6 +21,11 @@ def threenp1range(upper_limit):
     for i in range(2,upper_limit):
         iters = threenp1(i)
         objs_in_sequence[i] = iters
+        for key in objs_in_sequence:
+            max_so_far = 0
+            if objs_in_sequence[iters] > max_so_far:
+                max_so_far = key
+                print(objs_in_sequence, objs_in_sequence[max_so_far])
     return objs_in_sequence
 
 def graph_coordinates(threenplus1_iters_dict):
@@ -29,6 +34,20 @@ def graph_coordinates(threenplus1_iters_dict):
     count = threenp1(n)
     objs_in_sequence = threenp1range(upper_limit)
     threenplus1_iters_dict = dict.items(objs_in_sequence)
+    keys = objs_in_sequence.keys()
+    x = objs_in_sequence  
+    y = count
+   # pairs = zip(dict.values(x), dict.keys(y))
+    points = []
+    for x in objs_in_sequence:
+        points.append(x)
+        points.append(y)
+    return points
+    graph_coordinates(threenplus1_iters_dict)
+    new_display = pygame.transform.flip(display, False, True)
+    width, height = new_display.get_size()
+    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
+    display.blit(new_display, (0, 0))
     
         
 
@@ -41,19 +60,8 @@ def main():
     print("Number you started with:", n)
     print("Iterations:", objs_in_sequence)
     print("Number of iterations:", count)
-    threenplus1_iters_dict = dict.items(objs_in_sequence)
-    keys = objs_in_sequence.keys()
-    x = objs_in_sequence  
-    y = count
-   # pairs = zip(dict.values(x), dict.keys(y))
-    #points = []
-    #for x in objs_in_sequence:
-       # points.append(x)
-       # points.append(y)
-    #return points
-    graph_coordinates(threenplus1_iters_dict)
 
-    width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
+    #width, height = new_display.get_size()
+    #new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
 
 main()
