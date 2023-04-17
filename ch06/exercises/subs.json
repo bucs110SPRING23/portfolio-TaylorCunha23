@@ -1,0 +1,11 @@
+import json
+
+word_string= '''' 
+{
+    "President": "Comedian",
+    "hush":"shut up",
+    "Zoom":"pigeon",
+}
+'''
+data = json.loads(word_string)
+print(data)
