@@ -19,15 +19,15 @@ def main():
         i += 1
     print("=========== ...__str__ method passed ===========")
 
-    # print("=========== Testing vowels method... ===========")
-    # expected_results = ["4", "3", "3", "many", "many", "0"]
-    # i = 0
-    # for s in su:
-    #     result = s.vowels()
-    #     print(f"{s}, got: {result}, expected: {expected_results[i]}")
-    #     assert(result == expected_results[i])
-    #     i += 1
-    #     print("=========== ...vowels method passed ===========")
+    print("=========== Testing vowels method... ===========")
+    expected_results = ["4", "3", "3", "many", "many", "0"]
+    i = 0
+    for s in su:
+        result = s.vowels()
+        print(f"{s}, got: {result}, expected: {expected_results[i]}")
+        assert(result == expected_results[i])
+        i += 1
+        print("=========== ...vowels method passed ===========")
 
     print("=========== Testing bothEnds method... ===========")
     expected_results = ["inng", "aark", "aaaa", "aeOU", "a  z", '']
