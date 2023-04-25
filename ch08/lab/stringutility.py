@@ -1,6 +1,4 @@
-#vowel_list = ['a','e','i','o','u','A','E','I','O','U']
-#string = ["interesting", "aardvark", "aaa", "aeiouAEIOU", "a b c d e f g h i j k l m n o p q r s t u v w x y z", '']
-
+import string
 class StringUtility:
     def __init__(self, string):
         self.string = string
@@ -38,32 +36,22 @@ class StringUtility:
             total += val
         return total
 
-    # def cipher(self):
-    #     shift = len(self.string)
-    #     cipherText = ""
-    #     for char in self.string:
-    #         letter = ord(char)
-    #         if char.isalpha():
-    #             alphabet = ord(char) + shift 
-    #             alphabet %= 26
-    #             # if alphabet > ord('z'):
-    #             #     alphabet -= 26
-    #             changed_letter = chr(alphabet)
-    #             cipherText += changed_letter
-    #     return cipherText
+    def cipher(self):
+        shift = len(self.string)
+        lowercase = string.ascii_lowercase
+        uppercase = string.ascii_uppercase
+        result = ""
 
-    # def cipher(self):
-    #     lowercase = string.ascii_lowercase
-    #     uppercase = string.ascii_uppercase
-    #     result = ""
-    #     for char in self.string:
-    #         if char.islower():
-    #             index = lowercase.index(char)
-    #             result += lowercase[(index + shift) % 26]
-    #         else:
-    #             index = uppercase.index(char)
-    #             result += uppercase[(index + shift) % 26]
-
+        for char in self.string:
+            if char.islower():
+                index = lowercase.index(char)
+                result += lowercase[(index + shift) % 26]
+            elif char.isupper():
+                index = uppercase.index(char)
+                result += uppercase[(index + shift) % 26]
+            else: 
+                result += char
+        return result
 
 
 
