@@ -31,21 +31,43 @@ class StringUtility:
             other_half = self.string[1:]
             return first_char + other_half.replace(first_char, "*")
 
-    #def asciiSum(self):
-        #ascii_list = []
-        #total = 0
-        #for char in self.string:
-            #ascii_list.append(ord(char))
-        #for ascii in ascii_list:
-            #total += ascii
-            #return int(total)
-
     def asciiSum(self):
         total = 0
         for char in self.string:
-            ascii = ord(char)
-            total += ascii
-            return total
+            val = ord(char)
+            total += val
+        return total
+
+    # def cipher(self):
+    #     shift = len(self.string)
+    #     cipherText = ""
+    #     for char in self.string:
+    #         letter = ord(char)
+    #         if char.isalpha():
+    #             alphabet = ord(char) + shift 
+    #             alphabet %= 26
+    #             # if alphabet > ord('z'):
+    #             #     alphabet -= 26
+    #             changed_letter = chr(alphabet)
+    #             cipherText += changed_letter
+    #     return cipherText
+
+    # def cipher(self):
+    #     lowercase = string.ascii_lowercase
+    #     uppercase = string.ascii_uppercase
+    #     result = ""
+    #     for char in self.string:
+    #         if char.islower():
+    #             index = lowercase.index(char)
+    #             result += lowercase[(index + shift) % 26]
+    #         else:
+    #             index = uppercase.index(char)
+    #             result += uppercase[(index + shift) % 26]
+
+
+
+
+
 
 
   
